@@ -10,10 +10,54 @@
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
     <script type="text/babel">
         function Header() {
-            return (<h1>La maison jungle</h1>);
+            var title = "La maison jungle";
+            return (<h1>{title.toUpperCase()}</h1>);
         }
 
-        ReactDOM.render(<Header />, document.getElementById("root"));
+        function Description() {
+            return (<p>Ici achetez toutes les plantes dont vous avez toujours rêvé</p>);
+        }
+
+        function Banner() {
+            return (
+                <div>
+                    <Header />
+                    <Description />
+                </div>
+            );
+        }
+
+        function Plant(props) {
+            return (<li>{props.name} : {props.price}€</li>);
+        }
+
+        function Cart() {
+            const monsteraPrice = 8;
+            const lierrePrice = 10;
+            const bouquetPrice = 15;
+            return (
+                <div>
+                    <h2>Panier</h2>
+                    <ul>
+                        <Plant name='Monstera' price={monsteraPrice} />
+                        <Plant name='Lierre' price={lierrePrice} />
+                        <Plant name='Bouquet de fleurs' price={bouquetPrice} />
+                    </ul>
+                    <p>Total : {monsteraPrice + lierrePrice + bouquetPrice}€</p>
+                </div>
+            );
+        }
+
+        function App() {
+            return (
+                <div>
+                    <Banner />
+                    <Cart />
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById("root"));
     </script>
   </body>
 </html>
