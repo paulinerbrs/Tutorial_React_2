@@ -1,5 +1,4 @@
 import Plant from './Plant';
-
 import '../styles/Cart.css';
 
 function Cart() {

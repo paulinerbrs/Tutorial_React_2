@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: right;
+}
+
+.title {
+    padding-left: 32px;
+}
+
+.logo {
+    height: 45px;
+    width: 45px;
+}
