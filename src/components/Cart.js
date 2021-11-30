@@ -1,4 +1,4 @@
-import Plant from './Plant';
+import CartItem from './CartItem';
 import '../styles/Cart.css';
 
 function Cart() {
@@ -9,9 +9,9 @@ function Cart() {
         <div className='cart'>
             <h2>Panier</h2>
             <ul>
-                <Plant name='Monstera' price={monsteraPrice} />
-                <Plant name='Lierre' price={lierrePrice} />
-                <Plant name='Bouquet de fleurs' price={bouquetPrice} />
+                <CartItem name='Monstera' price={monsteraPrice} />
+                <CartItem name='Lierre' price={lierrePrice} />
+                <CartItem name='Bouquet de fleurs' price={bouquetPrice} />
             </ul>
             <p>Total : {monsteraPrice + lierrePrice + bouquetPrice}€</p>
         </div>

@@ -4,7 +4,7 @@ function Description() {
     if(!isSpring) {
         return <p>Ce n'est pas le moment de rempoter</p>
     }
-    return <p>C'est le printemps, rempotez !</p>;
+    return <p>C'est le printemps, rempotez ! 🌱</p>;
 }
 
 export default Description;

@@ -1,5 +1,5 @@
-function Plant(props) {
+function CartItem(props) {
     return (<li>{props.name} : {props.price}€</li>);
 }
 
-export default Plant;
+export default CartItem;
