@@ -8,8 +8,10 @@ function PlantItem(props) {
             {/* {props.isSpecialOffer && <p className='sales'>Soldes</p>} */}
             {props.name}
             {props.isBestSale && '🔥'}
-            <CareScale careType='light' scaleValue={props.light} />
-            <CareScale careType='water' scaleValue={props.water} />
+            <div>
+                <CareScale careType='light' scaleValue={props.light} />
+                <CareScale careType='water' scaleValue={props.water} />
+            </div>
         </li>
     );
 }
