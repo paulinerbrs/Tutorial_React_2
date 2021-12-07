@@ -1,5 +1,5 @@
-import Sun from '../assets/sun.svg'
-import Water from '../assets/water.svg'
+import Sun from '../assets/sun.svg';
+import Water from '../assets/water.svg';
 
 function handleClick(careType, scaleValue){
     const quantityLabel = {
@@ -7,7 +7,7 @@ function handleClick(careType, scaleValue){
         2: 'modérément',
         3: 'beaucoup'
     };
-    const type = careType === 'light' ? " de lumière" : " d'arrosage";
+    const type = careType === 'light' ? "de lumière" : "d'arrosage";
     alert(`Cette plante requiert ${quantityLabel[scaleValue]} ${type}`);
 }
 

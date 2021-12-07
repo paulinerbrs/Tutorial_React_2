@@ -17,11 +17,8 @@ function Footer() {
 			</div>
 			<div className='footer-elem'>
                 <span>Laissez-nous votre mail : </span>
-                <input 
-                    placeholder='Entrez votre mail'
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                    onBlur={handleBlur}
+                <input placeholder='Entrez votre mail' value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)} onBlur={handleBlur}
                 />
             </div>
 		</footer>

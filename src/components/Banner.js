@@ -1,12 +1,9 @@
 import '../styles/Banner.css';
-import Header from './Header';
-import Description from './Description';
 
-function Banner() {
+function Banner({ children }) {
     return (
         <div className='banner'>
-            <Header />
-            <Description />
+            {children}
         </div>
     );
 }
