@@ -1,6 +1,7 @@
 .categories {
-	text-align: center;
 	padding-top: 30px;
+	width: 500px;
+	margin: auto;
 }
 
 .categories-select {

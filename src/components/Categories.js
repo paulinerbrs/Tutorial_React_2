@@ -1,15 +1,15 @@
+import Select from 'react-select';
 import '../styles/Categories.css';
 
-function Categories({ categories, activeCategory, setActiveCategory }) {
+function Categories({ categories, setActiveCategory }) {
+    const options = [];
+    categories.forEach(function(option) {
+        options.push({ label: option, value: option })
+    });
+
     return (
-        <div className='categories'>            
-            <select className='categories-select' value={activeCategory} onChange={(e) => setActiveCategory(e.target.value)}>
-                <option value=''>---</option>
-                {categories.map((category) => (
-                    <option key={category} value={category}>{category}</option>
-                ))}
-            </select>
-            <button onClick={() => setActiveCategory('')}>Réinitialiser</button>
+        <div className='categories'>
+            <Select options={options} placeholder='Categories' isMulti onChange={(values) => setActiveCategory(values.map(v => v.value))}/>
         </div>
     );
 }
