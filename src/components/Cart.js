@@ -12,6 +12,14 @@ function Cart({ cart, updateCart }) {
         document.title = `LMJ: ${total}€ d'achats`
     }, [total]);
 
+    function removeFromCart(name){
+        const plantToRemove = cart.find((plant) => plant.name === name);
+        if (plantToRemove) {
+            const cartFilteredCurrentPlant = cart.filter((plant) => plant.name !== name);
+            updateCart([...cartFilteredCurrentPlant]);
+        }
+    }
+
     return isOpen ? (
         <div className='cart'>
             <button className="cart-toggle-button" onClick={() => setIsOpen(false)}>Fermer</button>
@@ -22,6 +30,7 @@ function Cart({ cart, updateCart }) {
                         {cart.map(({ name, price, amount }, index) => (
                             <div key={`${name}-${index}`}>
                                 {name} {price}€ x {amount}
+                                <button onClick={() => removeFromCart(name)}>Supprimer</button>
                             </div>
                         ))}
                     </ul>

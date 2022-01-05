@@ -5,9 +5,8 @@
     background-color: #31b572;
 }
 
-.cart-add-button {
-	margin-left: 32px;
-	cursor: pointer;
+.cart > div > ul {
+	padding: 0;
 }
 
 .cart-toggle-button {
